@@ -1,5 +1,5 @@
 (executable
  (public_name aocaml)
  (name main)
- (libraries core str)
+ (libraries core str pcre)
  (preprocess (pps ppx_jane)))
