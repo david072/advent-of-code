@@ -2,4 +2,4 @@
  (public_name aocaml)
  (name main)
  (libraries core str pcre)
- (preprocess (pps ppx_jane)))
+ (preprocess (pps ppx_jane ppx_deriving.show)))
