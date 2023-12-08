@@ -14,4 +14,5 @@ let () =
   (* print_solutions 4 Day4.solve1 Day4.solve2; *)
   (* print_solutions 5 Day5.solve1 Day5.solve2; *)
   (* print_solutions 6 Day6.solve1 Day6.solve2; *)
-  print_solutions 7 Day7.solve1 Day7.solve2;
+  (* print_solutions 7 Day7.solve1 Day7.solve2; *)
+  print_solutions 8 Day8.solve1 Day8.solve2;
