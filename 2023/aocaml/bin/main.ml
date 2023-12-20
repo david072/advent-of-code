@@ -1,26 +1,31 @@
 open Core
 
-let print_solutions day solve1 solve2 = 
+module type Day = sig
+  val solve1 : string list -> int
+  val solve2 : string list -> int
+end
+
+let print_solutions day (module D: Day) = 
   let str_day = Int.to_string day in
   let lines = In_channel.read_lines ("day" ^ str_day ^ "_input.txt") in
-  print_endline ("Day " ^ str_day ^ ":");
-  print_endline ("- Part One: " ^ (Int.to_string (solve1 lines)));
-  print_endline ("- Part Two: " ^ (Int.to_string (solve2 lines)))
+  printf "Day %i:\n" day;
+  printf "- Part One: %i\n" @@ D.solve1 lines;
+  printf "- Part Two: %i\n" @@ D.solve2 lines
 
 let () = 
-  (* print_solutions 1 Day1.solve1 Day1.solve2; *)
-  (* print_solutions 2 Day2.solve1 Day2.solve2; *)
-  (* print_solutions 3 Day3.solve1 Day3.solve2; *)
-  (* print_solutions 4 Day4.solve1 Day4.solve2; *)
-  (* print_solutions 5 Day5.solve1 Day5.solve2; *)
-  (* print_solutions 6 Day6.solve1 Day6.solve2; *)
-  (* print_solutions 7 Day7.solve1 Day7.solve2; *)
-  (* print_solutions 8 Day8.solve1 Day8.solve2; *)
-  (* print_solutions 9 Day9.solve1 Day9.solve2; *)
-  (* print_solutions 10 Day10.solve1 Day10.solve2; *)
-  (* print_solutions 11 Day11.solve1 Day11.solve2; *)
-  (* print_solutions 12 Day12.solve1 Day12.solve2; *)
-  (* print_solutions 13 Day13.solve1 Day13.solve2; *)
-  (* print_solutions 15 Day15.solve1 Day15.solve2; *)
-  print_solutions 19 Day19.solve1 Day19.solve2;
-  (* print_solutions 20 Day20.solve1 Day20.solve2; *)
+  (* print_solutions 1 (module Day1); *)
+  (* print_solutions 2 (module Day2); *)
+  (* print_solutions 3 (module Day3); *)
+  (* print_solutions 4 (module Day4); *)
+  (* print_solutions 5 (module Day5); *)
+  (* print_solutions 6 (module Day6); *)
+  (* print_solutions 7 (module Day7); *)
+  (* print_solutions 8 (module Day8); *)
+  (* print_solutions 9 (module Day9); *)
+  (* print_solutions 10 (module Day10); *)
+  (* print_solutions 11 (module Day11); *)
+  (* print_solutions 12 (module Day12); *)
+  (* print_solutions 13 (module Day13); *)
+  (* print_solutions 15 (module Day15); *)
+  print_solutions 19 (module Day19);
+  (* print_solutions 20 (module Day20); *)
