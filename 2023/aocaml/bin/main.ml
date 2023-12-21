@@ -27,5 +27,6 @@ let () =
   (* print_solutions 12 (module Day12); *)
   (* print_solutions 13 (module Day13); *)
   (* print_solutions 15 (module Day15); *)
-  print_solutions 19 (module Day19);
+  (* print_solutions 19 (module Day19); *)
   (* print_solutions 20 (module Day20); *)
+  print_solutions 21 (module Day21);
